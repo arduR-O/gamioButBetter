@@ -96,7 +96,7 @@ const Home = () => {
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/bg.png)`,
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundRepeat: "repeat-y",
         filter: "contrast(140%) brightness(120%)",
       }}
     >
