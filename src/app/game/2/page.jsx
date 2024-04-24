@@ -8,6 +8,7 @@ const Home = () => {
   const [board, setBoard] = useState(Array(9).fill(null)); // Initialize the board with 9 null values
   const [xIsNext, setXIsNext] = useState(true); // Indicates whether X is next to play
   const [winner, setWinner] = useState(null); // Keeps track of the winner
+  const [count, setCount] = useState(0);
   const bgAudioRef = useRef(null);
   const resetAudio = () => {
     if (bgAudioRef.current) {
@@ -38,6 +39,8 @@ const Home = () => {
     newBoard[index] = xIsNext ? "X" : "O";
     setBoard(newBoard);
     setWinner(calculateWinner(newBoard));
+    setCount(count + 1);
+    if(count === 8 && !winner) setWinner("It's a draw!") 
     setXIsNext(!xIsNext);
   };
 
@@ -79,10 +82,11 @@ const Home = () => {
     setBoard(Array(9).fill(null));
     setWinner(null);
     setXIsNext(true);
+    setCount(0);
   };
 
   const status = winner
-    ? `Winner: ${winner}`
+    ? (winner==="It's a draw!"? "It's a draw!" : `Winner: ${winner}`)
     : `Next player: ${xIsNext ? "X" : "O"}`;
   const statusStyle = xIsNext ? { left: 0 } : { right: 0 }; // Conditionally set position based on xIsNext
 
