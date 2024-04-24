@@ -35,12 +35,16 @@ const Home = () => {
     if (board[index] || winner) {
       return;
     }
-    const newBoard = board.slice();
+    const newBoard = [...board];
     newBoard[index] = xIsNext ? "X" : "O";
     setBoard(newBoard);
-    setWinner(calculateWinner(newBoard));
+    const newWinner = calculateWinner(newBoard);
+    setWinner(newWinner);
+    // console.log(newBoard)
+    // console.log(board)
+    // console.log(winner)
     setCount(count + 1);
-    if(count === 8 && !winner) setWinner("It's a draw!") 
+    if(count === 8 && !newWinner) setWinner("It's a draw!") 
     setXIsNext(!xIsNext);
   };
 
