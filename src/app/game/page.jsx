@@ -6,7 +6,7 @@ const Home = () => {
   //   const bgAudioRef = useRef(null);
 
   useEffect(() => {
-    const bgAudio = new Audio("/audio/bgHome.mp3");
+    const bgAudio = new Audio("/audio/ganga.mp3");
     bgAudio.preload = "auto";
     bgAudio.loop = true;
     // bgAudioRef.current = bgAudio;
@@ -27,12 +27,12 @@ const Home = () => {
       }}
     >
       <div className="flex flex-wrap justify-around w-full">
-        <Card2
+        {/* <Card2
           name="Fruit Crush"
           desc="Fruit Crush is a delightful puzzle game where players match rows or columns of three or more fruits of the same type to crush them and earn points. As you progress, you can strategically align four or even five fruits to create powerful combos and rack up even more points"
           thumbnail={"/fruit.png"}
           id={1}
-        ></Card2>
+        ></Card2> */}
          <Card name="Tic Tac Toe"  desc="The classic two-player game of X's and O's. Take turns marking spaces on a 3x3 grid, trying to get three in a row before your opponent. Simple rules, endless fun!" thumbnail={"/tictoe.png"} id={2}></Card>
         <Card
           name="Space Wars"

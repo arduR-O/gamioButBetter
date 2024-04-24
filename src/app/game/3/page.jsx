@@ -42,13 +42,13 @@ const Home = () => {
   useEffect(() => {
     resetAudio(); // Reset audio objects
 
-    const bgAudio = new Audio("/audio/bgSpace.mp3");
+    const bgAudio = new Audio("/audio/haske.mp3");
     bgAudio.preload = "auto";
     bgAudio.loop = true;
     bgAudioRef.current = bgAudio;
     bgAudio.play();
 
-    const overAudio = new Audio("/audio/Over.mp3");
+    const overAudio = new Audio("/audio/tunak.mp3");
     overAudio.preload = "auto";
     overAudioRef.current = overAudio;
 
