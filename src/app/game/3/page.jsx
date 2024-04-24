@@ -139,6 +139,21 @@ const Home = () => {
     setBullets2([]);
     setWinner(null);
     overAudioRef.current.currentTime = 0;
+    // overAudioRef.current.pause();
+    bgAudioRef.current.currentTime = 0;
+    bgAudioRef.current.play();
+    setKeysPressed({});
+  }
+  const reset2 = ()=>{
+    setHealth1(100);
+    setHealth2(100);
+    setTop1(0);
+    setTop2(0);
+    setBullets1([]);
+    setBullets2([]);
+    setWinner(null);
+    overAudioRef.current.currentTime = 0;
+    overAudioRef.current.pause();
     bgAudioRef.current.currentTime = 0;
     bgAudioRef.current.play();
     setKeysPressed({});
@@ -313,7 +328,7 @@ const Home = () => {
               {winner === "Orange" ? "Orange wins" : "Purple wins"}
             </span>
           </p>
-        <Image src="/reset.png" height={125} width={125} onClick={()=>reset()} className="hover:scale-105 active:scale-95"/>
+        <Image src="/reset.png" height={125} width={125} onClick={()=>reset2()} className="hover:scale-105 active:scale-95"/>
         </div>
       )}
       <div
