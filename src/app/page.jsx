@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,8 +40,16 @@ const home = () => {
         </div>
       ) : (
         <div className="w-full h-full text-4xl whitespace-break-spaces flex justify-evenly items-center p-10 text-orange-600 flex-col">
-          Please use a laptop to play the games. Click the button below to continue anyways.
-          <button type="button" class="text-white bg-yellow-500 border border-black focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Continue Anyways</button>
+          Please use a laptop to play the games. Click the button below to
+          continue anyways.
+          <Link href={"/game"}>
+            <button
+              type="button"
+              class="text-white bg-yellow-500 border border-black focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900"
+            >
+              Continue Anyways
+            </button>
+          </Link>
         </div>
       )}
     </main>
