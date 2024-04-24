@@ -92,7 +92,7 @@ const Home = () => {
 
   return (
     <main
-      className="relative h-[100vh] w-[100vw]"
+      className="relative h-[100vh] w-[100vw] overflow-auto"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/bg.png)`,
         backgroundSize: "cover",
